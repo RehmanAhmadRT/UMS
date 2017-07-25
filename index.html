@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset = "UTF-8">
+  <meta http-equiv = "X-UA-Compatible" content = "IE = edge,chrome = 1">
+  <title>Backbone.js</title>
+</head>
+
+<style>
+table, th, td {
+    border: 1px solid black;
+}
+</style>
+
+<button id="buttonShow">Show</button>
+<button type="submit" id="buttonInsert">Insert</button>
+<div id="show"></div>
+<div id="create"></id>
+<script type="text/x-handlebars-template" id="item-template">
+  <div class="view">
+    <table>
+      <tr>
+        <th>Student ID</th>
+        <th>Student Name</th>
+        <th>Teacher Name</th>
+        <th>Course Name</th>
+      </tr>
+      {{#each this}}
+      <tr>
+        <td>{{sid}}</td>
+        <td>{{sname}}</td>
+        <td>{{fk_tid}}</td>
+        <td>{{fk_cid}}</td>
+      </tr>
+    {{/each}}
+  </div>
+</script>
+
+<script type="text/x-handlebars-template" id="item-template-insert">
+  <div class="view">
+  </div>
+</script>
+
+<table>
+  <tr>
+    <td> <input type="text" id="sname" placeholder="Student Name"></td>
+    <td> <input type="text" id="fk_tid" placeholder="Teacher ID"></td>
+    <td> <input type="text" id="fk_cid" placeholder="Course ID"></td>
+  </tr>
+</table>
+
+  <script src = "res/jquery-3.2.1.min.js"></script>
+  <script src = "res/underscore.js"></script>
+  <script src = "res/backbone-min.js"></script>
+  <script src="res/handlebars.min.js"></script>
+  <script type="text/javascript">
+   //var app = app || {};
+  </script>
+  <script src="model/model.js"></script>
+  <script src="collection/collection.js"></script>
+  <script src="view/modelView.js"></script>
+  <script src="view/collectionView.js"></script>
+  <script src="main.js"></script>
+
+  </body>
+</html>
